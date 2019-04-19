@@ -1,0 +1,24 @@
+/*
+=======================================================
+Tabs CSS - njw 
+=======================================================
+*/
+
+
+/*use tabs styling from arable.min.css and add additional content here*/
+
+.tabs-content{
+  display: none;
+}
+
+.tabs-content.active{
+  display: block;
+  padding: 1rem 0;
+}
+
+.tabs-content img {
+
+  width: 100%;
+  max-width: 100%;
+
+}

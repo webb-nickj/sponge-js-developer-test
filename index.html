@@ -20,6 +20,10 @@
 
   <!-- The CSS for this page -->
   <link href="app/css/spongetest.css" rel="stylesheet">
+
+  <!-- CSS for tabs -->
+  <link href="app/css/tabs.css" rel="stylesheet">
+
 </head>
 <body>
 <div id="header-wrapper">
@@ -28,10 +32,47 @@
 <div class="grid-container">
   <section class="grid-50">
     <!-- INSERT YOUR "ABOUT ME" SECTION HERE -->
+    <article id="about-me" class="tab-container">
+
+      <noscript>
+        <h1>You must enable JavaScript in order to view this page.</h1>
+      </noscript>
+
+      <h2 class="no-bottom-padding">About me</h2>
+
+      <ul class="tabs" role="tablist">
+
+        <li class="tab"><a href="#about-me-content" class="tabs-anchor" role="tab" aria-controls="about-me-content">About me</a></li>
+        <li class="tab"><a href="#about-me-photo" class="tabs-anchor" role="tab" aria-controls="about-me-photo">Photo</a></li>
+        <li class="tab"><a href="#about-me-links" class="tabs-anchor" role="tab" aria-controls="about-me-links">Links</a></li>
+
+      </ul>
+
+      <section id="about-me-content" class="tabs-content" role="tabpanel">
+        <p>Hi! My name is Nick Webb.</p>
+        <p>I am an eLearning developer with almost 20-years experience. For the past three years I have been working with xAPI and the Adapt framework and authoring tool in my roles with International Workplace.</p>
+        <p>I have been instrumental in the company's adoption of Adapt. I have also been the lead developer behind most of our bespoke themes, components and extensions, including our xAPI extension. </p>
+      </section>
+
+      <section id="about-me-photo" class="tabs-content" role="tabpanel">
+        <figure>
+          <img src="http://www.nickwebb.online/portfolio/course/en/assets/nick.png" alt="A picture of Nick and his wife">
+          <figcaption>Nick on holiday with his wife in the Snowdonia National Park.</figcaption>
+        </figure>
+        
+      </section>
+
+      <section id="about-me-links" class="tabs-content" role="tabpanel">
+        <p>Below you will find links to a few examples of my recent work:</p>
+        <ul>
+          <li><a href="http://www.nickwebb.online/portfolio" target="_blank"><strong>My portfolio</strong></a><br>An overview (with examples) of the work I have been leading over the past three-years, using Adapt and xAPI.</li>
+          <li><a href="https://youtu.be/33xlmcQY1_0" target="_blank"><strong>Our Accredited Content Connector</strong></a><br>A short YouTube video demonstrating the Accredited Content Connector. This allows corporate clients to access our approved IOSH courses through their existing learning platform, while leaving International Workplace in full control of the content, progress and performance data and the assessment processes. I was lead developer for this Angular-based application.</li>
+        </ul>
+      </section>
+
+    </article>
+
     <article id="content"></article>
-    <noscript>
-      <h1>You must enable JavaScript in order to view this page.</h1>
-    </noscript>
   </section>
   <aside id="tasks" class="grid-45 prefix-5"></aside>
 </div>
@@ -105,8 +146,12 @@
 <!-- Simple JSON Content Parser -->
 <script src="app/js/lib/content.js"></script>
 
+<!-- Tabs functionality -->
+<script src="app/js/lib/tabs.js"></script>
+
 <!-- The JS for this page -->
 <script src="app/js/spongetest.js"></script>
+
 
 <!--
   =====================================================

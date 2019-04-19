@@ -67,6 +67,22 @@ jQuery(
 				$( '#documentation' ).append( strContentHTML );
 			};
 
+
+			/**
+			 * Populate the documentation links
+			 */
+			var populateAboutMe = function() {
+				/*var strContentSource = $( '#documentation-template' ).html(),
+						resContentTemplate = Handlebars.compile( strContentSource ),
+						strContentHTML = resContentTemplate( resContent.getItem( 'docs' ) );
+
+				$( '#documentation' ).append( strContentHTML );
+				*/
+			
+				new tabs( document.getElementById( 'about-me' ) );
+
+			};
+
 			/**
 			 * Register a Handlebars helper for the difficulty stars
 			 */
@@ -95,6 +111,7 @@ jQuery(
 						populateTasks();
 						populateContent();
 						populateDocumentation();
+						populateAboutMe();
 					}
 			);
 		}
