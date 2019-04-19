@@ -5,32 +5,8 @@
     "myname": "Nick Webb"
   },
   "content": {
-    "title": "Welcome!",
-    "body": "<p>Please carefully read the instructions on the right and work through as many of the tasks as you can.</p><p>For this test, you will need:</p><ul><li>An IDE of your choice (e.g. Sublime Text)</li><li>A copy of Microsoft Word (for opening the example text - you may be able to use Google Docs instead)</li></ul><p>Links to any documentation you may need are in the footer of this page.</p><p><em><strong>It is always better to submit something broken than nothing at all.</strong> Document any issues you had and include them in your submission.</em></p>",
-    "task": {
-      "markup": "<div id=\"boxes\" style=\"background-color: #7B0051;\"><div id=\"box-right\" style=\"background-color: #FC6E8D;\"></div><div id=\"box-left\" style=\"background-color: #FFB400;\"></div></div>",
-      "references": {
-        "images": [
-          {
-            "width": 1220,
-            "image": "./resources/box-reference-full.png"
-          },
-          {
-            "width": 768,
-            "image": "./resources/box-reference-768.png"
-          },
-          {
-            "width": 767,
-            "image": "./resources/box-reference-767.png"
-          },
-          {
-            "width": 400,
-            "image": "./resources/box-reference-400.png"
-          }
-        ],
-        "video": "./resources/box-reference-responsive.mp4"
-      }
-    }
+    "title": "HTML",
+    "body": "<p><strong>HyperText Markup Langage</strong>, commonly referred to as <a href=\"https://en.wikipedia.org/wiki/HTML\"><strong>HTML</strong></a>, is the standard markup language used to create web pages. Along with <a href=\"https://en.wikipedia.org/wiki/Cascading_Style_Sheets\"><strong>Cascading Style Sheets (CSS)</strong></a> and <a href=\"https://en.wikipedia.org/wiki/JavaScript\"><strong>JavaScript</strong></a>, HTML is a cornerstone technology used by most websites to create visually engaging web pages, user interfaces for web applications, and user interfaces for many mobile applications.</p><p>The World Wide Web Consortium (W3C) recommends several conventions to ensure an easy migration between HTML and <strong>XHTML</strong> (Extensible HyperText Markup Language) (<a href=\"https://www.w3.org/TR/xhtml1/#guidelines\">see HTML Compatibility Guidelines</a>). The following steps can be applied to XHMTL 1.0 documents only:</p><ol><li>Include both <code>xml:lang</code> and <code>lang</code> attributes on any elements assigning language.</li><li>Use the empty-element syntax only for elements specified as empty in HTML.</li><li>Include an extra space in empty–element tags: for example <code>&lt;br /&gt;</code> instead of <code>&lt;br/&gt;</code>.</li><li>Include explicit close tags for elements that permit content but are left empty (for example, <code>&lt;div&gt;&lt;/div&gt;</code>, not <code>&lt;div /&gt;</code>).</li><li>Omit the XML declaration.</li></ol><p><a href=\"https://en.wikipedia.org/wiki/HTML5\"><strong>HTML5</strong></a> is a markup language used for  structuring and presenting content on the <a href=\"https://en.wikipedia.org/wiki/World_Wide_Web\">World Wide Web</a>. It was finalized and published on 28 October 2014 by the W3C. This is the fifth revision of the HTML standard since the inception of the World Wide Web.</p>"
   },
   "tasks": {
     "test": [
