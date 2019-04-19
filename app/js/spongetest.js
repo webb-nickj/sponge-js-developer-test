@@ -69,15 +69,15 @@ jQuery(
 
 
 			/**
-			 * Populate the documentation links
+			 * Populate the about-me section
 			 */
 			var populateAboutMe = function() {
-				/*var strContentSource = $( '#documentation-template' ).html(),
+				var strContentSource = $( '#about-me-template' ).html(),
 						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'docs' ) );
+						strContentHTML = resContentTemplate( resContent.getItem( 'about-me' ) );
 
-				$( '#documentation' ).append( strContentHTML );
-				*/
+				$( '#about-me' ).append( strContentHTML );
+				
 			
 				new tabs( document.getElementById( 'about-me' ) );
 
