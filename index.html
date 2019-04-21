@@ -47,7 +47,7 @@
 <div id="footer-wrapper">
   <footer id="footer" class="grid-container">
     <div class="grid-100">
-      <ul id="documentation" class="inline">
+      <ul id="docs" class="inline">
         <li><strong>Documentation:</strong></li>
       </ul>
     </div>
@@ -66,7 +66,7 @@
 </script>
 
 <!-- Task item Handlebars template -->
-<script id="task-template" type="text/x-handlebars-template">
+<script id="tasks-template" type="text/x-handlebars-template">
   {{#each test}}
   <h4 class="no-bottom-padding">{{title}}</h4>
   {{#each tasks}}
@@ -99,7 +99,7 @@
 </script>
 
 <!-- Documentation link Handlebars template -->
-<script id="documentation-template" type="text/x-handlebars-template">
+<script id="docs-template" type="text/x-handlebars-template">
   {{#each links}}
   <li><a href="{{url}}" target="_blank" title="{{title}} docs">{{title}}</a></li>
   {{/each}}

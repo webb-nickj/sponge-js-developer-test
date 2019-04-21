@@ -23,65 +23,53 @@ jQuery(
 			 */
 			var resContent = new Content( 'app/data/content.json' );
 
-			/**
-			 * Populate the header
-			 */
-			var populateHeader = function() {
-				var strHeaderSource = $( '#header-template' ).html(),
-						resHeaderTemplate = Handlebars.compile( strHeaderSource ),
-						strHeaderHTML = resHeaderTemplate( resContent.getItem( 'header' ) );
-
-				$( '#header' ).html( strHeaderHTML );
-			};
 
 			/**
-			 * Populate the tasks
+			 * Populate content area
 			 */
-			var populateTasks = function() {
-				var strTaskSource = $( '#task-template' ).html(),
-						resTasksTemplate = Handlebars.compile( strTaskSource ),
-						strTasksHTML = resTasksTemplate( resContent.getItem( 'tasks' ) );
+			/*var populateContentArea = function( contentId , templateId , dataKey ){
 
-				$( '#tasks' ).append( strTasksHTML );
-			};
+				var templateStr , template ,  htmlStr , targetEle , dataObj;
 
-			/**
-			 * Populate the content
-			 */
-			var populateContent = function() {
-				var strContentSource = $( '#content-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'content' ) );
-
-				$( '#content' ).append( strContentHTML );
-			};
-
-			/**
-			 * Populate the documentation links
-			 */
-			var populateDocumentation = function() {
-				var strContentSource = $( '#documentation-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'docs' ) );
-
-				$( '#documentation' ).append( strContentHTML );
-			};
-
-
-			/**
-			 * Populate the about-me section
-			 */
-			var populateAboutMe = function() {
-				var strContentSource = $( '#about-me-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'about-me' ) );
-
-				$( '#about-me' ).append( strContentHTML );
+				//check parameters are valid
+				if( contentId === undefined || typeof contentId !== 'string' || contentId === '' ) return;
+				if( templateId === undefined || typeof templateId !== 'string' || templateId === '' ) return;
+				if( dataKey === undefined || typeof dataKey !== 'string' || dataKey === '' ) return;
 				
-			
-				new tabs( document.getElementById( 'about-me' ) );
+				templateStr = $( '#' + templateId ).html();
+				//no template found
+				if( templateStr === '' ) return;
 
-			};
+				targetEle = $( '#' + contentId );
+				//no target element found
+				if( targetEle.length === 0 ) return;
+
+				dataObj = resContent.getItem( dataKey );
+				//no data object found
+				if( dataObj === undefined ) return;
+
+
+				//try compiling the Handlebars template 
+				try{
+					template = Handlebars.compile( templateStr );
+				}catch(e){
+					console.warn( "Failed to compile template: #" + templateId );
+					return;
+				}
+
+
+				//try executng the Handlebars template with the given data set
+				try{
+					htmlStr = template( dataObj );
+				}catch( e ){
+					console.warn( "Failed to execute template: #" + templateId );
+					return;					
+				}
+
+				targetEle.html( htmlStr );
+
+			}*/
+
 
 			/**
 			 * Register a Handlebars helper for the difficulty stars
@@ -107,11 +95,18 @@ jQuery(
 			 */
 			resContent.onReady(
 					function() {
-						populateHeader();
-						populateTasks();
-						populateContent();
-						populateDocumentation();
-						populateAboutMe();
+
+						//populate content areas
+						/*populateContentArea( 'header' , 'header-template' , 'header' );
+						populateContentArea( 'tasks' , 'task-template' , 'tasks' );
+						populateContentArea( 'content' , 'content-template' , 'content' );
+						populateContentArea( 'documentation' , 'documentation-template' , 'documentation' );
+						populateContentArea( 'about-me' , 'about-me-template' , 'about-me' );
+						*/
+
+						//configure tabs
+						new tabs( document.getElementById( 'about-me' ) );
+
 					}
 			);
 		}
