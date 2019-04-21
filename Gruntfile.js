@@ -7,8 +7,7 @@ module.exports = function(grunt) {
       "development": {
 
         "options": {
-          "sourceMap" : true,
-          "sourceMapFileInline" : true
+          "sourceMap" : true
         },
 
         "files": {

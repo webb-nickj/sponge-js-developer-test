@@ -55,3 +55,10 @@ pre {
 strong {
   font-weight: @font-weight-heavy;
 }
+
+/*Increase overall fontsize to 125% on screen smaller than 500px*/
+@media all and( max-width: 499px ){
+  body{
+    font-size: 1.25rem;
+  }
+}
