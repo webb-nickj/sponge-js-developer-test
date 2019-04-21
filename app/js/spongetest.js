@@ -15,61 +15,16 @@
  Page-specific JS
 =====================================================
 */
+'use strict';
+
+import ContentInstance from './lib/content.es6.js';
 
 jQuery(
 		function( $ ) {
 			/**
 			 * A new instance of the content parser using the content JSON file
 			 */
-			var resContent = new Content( 'app/data/content.json' );
-
-
-			/**
-			 * Populate content area
-			 */
-			/*var populateContentArea = function( contentId , templateId , dataKey ){
-
-				var templateStr , template ,  htmlStr , targetEle , dataObj;
-
-				//check parameters are valid
-				if( contentId === undefined || typeof contentId !== 'string' || contentId === '' ) return;
-				if( templateId === undefined || typeof templateId !== 'string' || templateId === '' ) return;
-				if( dataKey === undefined || typeof dataKey !== 'string' || dataKey === '' ) return;
-				
-				templateStr = $( '#' + templateId ).html();
-				//no template found
-				if( templateStr === '' ) return;
-
-				targetEle = $( '#' + contentId );
-				//no target element found
-				if( targetEle.length === 0 ) return;
-
-				dataObj = resContent.getItem( dataKey );
-				//no data object found
-				if( dataObj === undefined ) return;
-
-
-				//try compiling the Handlebars template 
-				try{
-					template = Handlebars.compile( templateStr );
-				}catch(e){
-					console.warn( "Failed to compile template: #" + templateId );
-					return;
-				}
-
-
-				//try executng the Handlebars template with the given data set
-				try{
-					htmlStr = template( dataObj );
-				}catch( e ){
-					console.warn( "Failed to execute template: #" + templateId );
-					return;					
-				}
-
-				targetEle.html( htmlStr );
-
-			}*/
-
+			var resContent = new ContentInstance( 'app/data/content.json' );
 
 			/**
 			 * Register a Handlebars helper for the difficulty stars
@@ -95,15 +50,7 @@ jQuery(
 			 */
 			resContent.onReady(
 					function() {
-
-						//populate content areas
-						/*populateContentArea( 'header' , 'header-template' , 'header' );
-						populateContentArea( 'tasks' , 'task-template' , 'tasks' );
-						populateContentArea( 'content' , 'content-template' , 'content' );
-						populateContentArea( 'documentation' , 'documentation-template' , 'documentation' );
-						populateContentArea( 'about-me' , 'about-me-template' , 'about-me' );
-						*/
-
+						
 						//configure tabs
 						new tabs( document.getElementById( 'about-me' ) );
 
