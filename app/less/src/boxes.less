@@ -2,13 +2,79 @@
  * Styles to make the boxes actually visible to start
  */
 #boxes {
-  padding: 40px;
+  padding: 40px; //initial padding - not allowed to change this!!!
+  
+  margin-bottom: 40px;
+  position: relative; //allow absolute positioning of child elements
+
+  &:before{
+    // dimensions for this element grabbed from photoshop
+    content: 'Wrapper';
+    position: absolute;
+    display: block;
+    background-color: inherit;
+    height: 40px;
+    width: 96px;
+    right: 0;
+    bottom: -40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    color: @white;
+    text-align: center;    
+  }
+
+  //clear floats - can't use overflow auto here
+  &:after{
+    content: '';
+    visibility: hidden;
+    display: block;
+    clear: both;
+    height: 0;
+  }
 }
 
 #box-left {
+  position: relative;
   height: 50px;
+  width: 210px;
+  max-width: 50%;
+  margin-top: 25%; //use margin-top for vertical positioning without using position absolute;
+  transform: translateY( -50% );
+  -ms-transform: translateY( -50% );
+  
+
+  &:after{
+    content: 'Left';
+  }
 }
 
 #box-right {
-  height: 50px;
+  position: relative;
+  height: 0;
+  width: 50%;
+  padding-top: 50%; //use padding for height to maintain aspect ratio
+  
+  float: right;
+  
+  &:after{
+    content: 'Right';
+  }
+}
+
+//general setup of pseudo content
+//in left and right boxes
+#box-left, #box-right{
+  &:after{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 50%;
+    display: block;
+    transform: translateY( -50% );
+    -ms-transform: translateY( -50% );
+    
+    text-align: center;
+    color: @white;
+    font-size: 1.5em;
+  }
 }

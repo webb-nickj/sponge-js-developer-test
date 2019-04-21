@@ -145,10 +145,63 @@ Tabs CSS - njw
  */
 #boxes {
   padding: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+#boxes:before {
+  content: 'Wrapper';
+  position: absolute;
+  display: block;
+  background-color: inherit;
+  height: 40px;
+  width: 96px;
+  right: 0;
+  bottom: -40px;
+  line-height: 40px;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+}
+#boxes:after {
+  content: '';
+  visibility: hidden;
+  display: block;
+  clear: both;
+  height: 0;
 }
 #box-left {
+  position: relative;
   height: 50px;
+  width: 210px;
+  max-width: 50%;
+  margin-top: 25%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+#box-left:after {
+  content: 'Left';
 }
 #box-right {
-  height: 50px;
+  position: relative;
+  height: 0;
+  width: 50%;
+  padding-top: 50%;
+  float: right;
+}
+#box-right:after {
+  content: 'Right';
+}
+#box-left:after,
+#box-right:after {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5em;
 }
