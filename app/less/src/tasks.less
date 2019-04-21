@@ -1,0 +1,56 @@
+#tasks {
+  padding-top: @block-padding-vertical;
+  padding-right: @block-padding-horizontal;
+  padding-bottom: ( @block-padding-vertical / 3 * 5 );
+  padding-left: @block-padding-horizontal;
+
+  position: relative;
+
+  background-color: @lighter-grey;
+
+  counter-reset: tasks;
+
+  z-index: 1;
+
+
+  article {
+    counter-increment: tasks;
+
+    h5 {
+      color: @sponge-red;
+
+      &::before {
+        min-width: 0.75em;
+        padding-right: 0.5em;
+
+        display: inline-block;
+
+        color: @dark-grey;
+        font-weight: @font-weight-light;
+        vertical-align: text-bottom;
+
+        content: counter(tasks) ".";
+      }
+
+      .difficulty {
+        margin-left: 1.5em;
+
+        display: inline-block;
+
+        float: right;
+
+        color: @yellow;
+        font-size: 0.8em;
+        white-space: nowrap;
+
+        .fa{
+          margin-left: 0.1em;  
+        }
+
+        .fa-star-o {
+          color: @mid-grey;
+        }
+      }
+    }
+  }
+}

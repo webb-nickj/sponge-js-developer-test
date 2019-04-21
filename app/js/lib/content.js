@@ -38,8 +38,6 @@
          */
         var onDataLoaded = function( objResponse ){
 
-          console.log( objResponse );
-
           objContent = objResponse;
 
           //iterate over keys in the data Object and attempt
