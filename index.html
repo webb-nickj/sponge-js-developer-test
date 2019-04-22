@@ -125,13 +125,17 @@
 <script src="vendor/handlebars-v4.0.5.js"></script>
 
 <!-- Simple JSON Content Parser -->
-<script type="module" src="app/js/lib/content.es6.js"></script>
+<script type="module" src="app/es6/lib/content.js"></script>
 
 <!-- Tabs functionality -->
 <script src="app/js/lib/tabs.js"></script>
 
 <!-- The JS for this page -->
-<script type="module" src="app/js/spongetest.js"></script>
+<script type="module" src="app/es6/spongetest.js"></script>
+
+<!-- ES5 Fallback for browsers not support ES6 modules -->
+<script nomodule src="app/es5/main.js"></script>
+
 
 
 <!--

@@ -17,7 +17,7 @@
 */
 'use strict';
 
-import ContentInstance from './lib/content.es6.js';
+import ContentInstance from './lib/content.js';
 
 jQuery(
 		function( $ ) {
